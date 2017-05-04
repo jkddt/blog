@@ -90,17 +90,23 @@
 
 
 
-<meta name="description" content="网络记事本">
+<meta name="description" content="执行firewall-cmd –permanent –zone=public –add-port=3306/tcp，提示FirewallD is not running，如下图所示。 通过systemctl status firewalld查看firewalld状态，发现当前是dead状态，即防火墙未开启。 通过systemctl start firewalld开启防火墙，没有任何提示即开启成功">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux目录">
-<meta property="og:url" content="http://yoursite.com/2017/04/27/linux目录/index.html">
+<meta property="og:title" content="FirewallD is not running">
+<meta property="og:url" content="http://yoursite.com/2017/05/04/running/index.html">
 <meta property="og:site_name" content="ZHB'blog">
-<meta property="og:description" content="网络记事本">
-<meta property="og:updated_time" content="2017-04-27T07:39:53.699Z">
+<meta property="og:description" content="执行firewall-cmd –permanent –zone=public –add-port=3306/tcp，提示FirewallD is not running，如下图所示。 通过systemctl status firewalld查看firewalld状态，发现当前是dead状态，即防火墙未开启。 通过systemctl start firewalld开启防火墙，没有任何提示即开启成功">
+<meta property="og:image" content="http://hiphotos.baidu.com/exp/pic/item/2cb4fefe9925bc314ece55c557df8db1ca137098.jpg">
+<meta property="og:image" content="http://hiphotos.baidu.com/exp/pic/item/8cf0d51349540923c4fa37239b58d109b2de4998.jpg">
+<meta property="og:image" content="http://hiphotos.baidu.com/exp/pic/item/9dc3cf58ccbf6c81a28b78b5b53eb13532fa40eb.jpg">
+<meta property="og:image" content="http://hiphotos.baidu.com/exp/pic/item/d66b7e59252dd42ae28b55f60a3b5bb5c8eab8aa.jpg">
+<meta property="og:image" content="http://hiphotos.baidu.com/exp/pic/item/48151723dd54564e89f6b064bade9c82d0584f98.jpg">
+<meta property="og:updated_time" content="2017-05-04T06:18:26.992Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux目录">
-<meta name="twitter:description" content="网络记事本">
+<meta name="twitter:title" content="FirewallD is not running">
+<meta name="twitter:description" content="执行firewall-cmd –permanent –zone=public –add-port=3306/tcp，提示FirewallD is not running，如下图所示。 通过systemctl status firewalld查看firewalld状态，发现当前是dead状态，即防火墙未开启。 通过systemctl start firewalld开启防火墙，没有任何提示即开启成功">
+<meta name="twitter:image" content="http://hiphotos.baidu.com/exp/pic/item/2cb4fefe9925bc314ece55c557df8db1ca137098.jpg">
 
 
 
@@ -128,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/27/linux目录/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/04/running/"/>
 
 
 
 
 
-  <title>linux目录 | ZHB'blog</title>
+  <title>FirewallD is not running | ZHB'blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -263,7 +269,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/27/linux目录/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/04/running/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHB">
@@ -284,7 +290,7 @@
             
             
               
-                linux目录
+                FirewallD is not running
               
             
           </h1>
@@ -299,8 +305,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-27T00:00:00+08:00">
-                2017-04-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-04T14:10:08+08:00">
+                2017-05-04
               </time>
             
 
@@ -309,28 +315,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -356,7 +340,23 @@
       
 
       
-        
+        <p> 执行firewall-cmd –permanent –zone=public –add-port=3306/tcp，提示FirewallD is not running，如下图所示。<br><img src="http://hiphotos.baidu.com/exp/pic/item/2cb4fefe9925bc314ece55c557df8db1ca137098.jpg" alt=""></p>
+<p>通过systemctl status firewalld查看firewalld状态，发现当前是dead状态，即防火墙未开启。<br><img src="http://hiphotos.baidu.com/exp/pic/item/8cf0d51349540923c4fa37239b58d109b2de4998.jpg" alt=""></p>
+<p>通过systemctl start firewalld开启防火墙，没有任何提示即开启成功。<br><img src="http://hiphotos.baidu.com/exp/pic/item/9dc3cf58ccbf6c81a28b78b5b53eb13532fa40eb.jpg" alt=""></p>
+<p>再次通过systemctl status firewalld查看firewalld状态，显示running即已开启了。<br><img src="http://hiphotos.baidu.com/exp/pic/item/d66b7e59252dd42ae28b55f60a3b5bb5c8eab8aa.jpg" alt=""></p>
+<p>如果要关闭防火墙设置，可能通过systemctl stop firewalld这条指令来关闭该功能。<br><img src="http://hiphotos.baidu.com/exp/pic/item/48151723dd54564e89f6b064bade9c82d0584f98.jpg" alt=""></p>
+<h1 id="开启端口"><a href="#开启端口" class="headerlink" title="开启端口"></a>开启端口</h1><p><code>firewall-cmd --zone=public --add-port=80/tcp --permanent</code></p>
+<p>命令含义：<br>–zone #作用域<br>–add-port=80/tcp #添加端口，格式为：端口/通讯协议<br>–permanent #永久生效，没有此参数重启后失效</p>
+<h1 id="重启防火墙"><a href="#重启防火墙" class="headerlink" title="重启防火墙"></a>重启防火墙</h1><p><code>firewall-cmd --reload</code></p>
+<h1 id="如要查询是否开启80端口则："><a href="#如要查询是否开启80端口则：" class="headerlink" title="如要查询是否开启80端口则："></a>如要查询是否开启80端口则：</h1><blockquote>
+<p># firewall-cmd –query-port=80/tcp<br>no</p>
+</blockquote>
+<p>显然80端口没有开启</p>
+<p>下面我们开启80端口：</p>
+<blockquote>
+<p># firewall-cmd –add-port=80/tcp<br>success</p>
+</blockquote>
+
       
     </div>
 
@@ -398,8 +398,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/25/markdown语法/" rel="prev" title="markdown语法">
-                markdown语法 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/04/mongodb/" rel="prev" title="mongodb">
+                mongodb <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -447,8 +447,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -463,7 +472,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -474,7 +483,7 @@
             
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -501,6 +510,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#开启端口"><span class="nav-number">1.</span> <span class="nav-text">开启端口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重启防火墙"><span class="nav-number">2.</span> <span class="nav-text">重启防火墙</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如要查询是否开启80端口则："><span class="nav-number">3.</span> <span class="nav-text">如要查询是否开启80端口则：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
