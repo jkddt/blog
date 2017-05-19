@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="启动mongodb，运行下面的命令 service mongod start chkconfig mongod on 如果你要启动客户端，直接运行命令 mongo">
+<meta name="description" content="安装mongodb服务yum install mongodb-server 安装mongodb客户端yum install mongodb 启动mongodb服务12service mongod startchkconfig mongod on 启动客户端mongo 远程访问mongodb打开防火墙设置默认端口27017，可以访问。设置mongodb配置文件/etc/mongod.conf。bin">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mongodb">
 <meta property="og:url" content="http://yoursite.com/2017/05/04/mongodb/index.html">
 <meta property="og:site_name" content="ZHB'blog">
-<meta property="og:description" content="启动mongodb，运行下面的命令 service mongod start chkconfig mongod on 如果你要启动客户端，直接运行命令 mongo">
-<meta property="og:updated_time" content="2017-05-04T06:12:33.850Z">
+<meta property="og:description" content="安装mongodb服务yum install mongodb-server 安装mongodb客户端yum install mongodb 启动mongodb服务12service mongod startchkconfig mongod on 启动客户端mongo 远程访问mongodb打开防火墙设置默认端口27017，可以访问。设置mongodb配置文件/etc/mongod.conf。bin">
+<meta property="og:updated_time" content="2017-05-19T03:57:52.587Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongodb">
-<meta name="twitter:description" content="启动mongodb，运行下面的命令 service mongod start chkconfig mongod on 如果你要启动客户端，直接运行命令 mongo">
+<meta name="twitter:description" content="安装mongodb服务yum install mongodb-server 安装mongodb客户端yum install mongodb 启动mongodb服务12service mongod startchkconfig mongod on 启动客户端mongo 远程访问mongodb打开防火墙设置默认端口27017，可以访问。设置mongodb配置文件/etc/mongod.conf。bin">
 
 
 
@@ -334,11 +334,17 @@
       
 
       
-        <p>启动mongodb，运行下面的命令</p>
-<p><code>service mongod start</code></p>
-<p><code>chkconfig mongod on</code></p>
-<p>如果你要启动客户端，直接运行命令</p>
-<p><code>mongo</code></p>
+        <h1 id="安装mongodb服务"><a href="#安装mongodb服务" class="headerlink" title="安装mongodb服务"></a>安装mongodb服务</h1><p><code>yum install mongodb-server</code></p>
+<h1 id="安装mongodb客户端"><a href="#安装mongodb客户端" class="headerlink" title="安装mongodb客户端"></a>安装mongodb客户端</h1><p><code>yum install mongodb</code></p>
+<h1 id="启动mongodb服务"><a href="#启动mongodb服务" class="headerlink" title="启动mongodb服务"></a>启动mongodb服务</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">service mongod start</div><div class="line">chkconfig mongod on</div></pre></td></tr></table></figure>
+<h1 id="启动客户端"><a href="#启动客户端" class="headerlink" title="启动客户端"></a>启动客户端</h1><p><code>mongo</code></p>
+<h1 id="远程访问mongodb"><a href="#远程访问mongodb" class="headerlink" title="远程访问mongodb"></a>远程访问mongodb</h1><p>打开<a href="../running/">防火墙</a>设置默认端口27017，可以访问。<br>设置mongodb配置文件/etc/mongod.conf。<br><code>bind_ip = 0.0.0.0</code> 所有ip都可以访问。<br><code>auth = true</code> 启用安全验证<br>打开浏览器：<a href="http://ip:27017" target="_blank" rel="external">http://ip:27017</a> 可以看到</p>
+<blockquote>
+<p>It looks like you are trying to access MongoDB over HTTP on the native driver port.</p>
+</blockquote>
+<h1 id="mongodb添加用户"><a href="#mongodb添加用户" class="headerlink" title="mongodb添加用户"></a>mongodb添加用户</h1><h2 id="添加管理员用户"><a href="#添加管理员用户" class="headerlink" title="添加管理员用户"></a>添加管理员用户</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mongo</div><div class="line">use admin </div><div class="line">db.addUser(&apos;root&apos;,&apos;123456&apos;)</div><div class="line">show users</div><div class="line">db.auth(&apos;root,&apos;123456&apos;)</div></pre></td></tr></table></figure>
+<h2 id="添加某一个数据库用户"><a href="#添加某一个数据库用户" class="headerlink" title="添加某一个数据库用户"></a>添加某一个数据库用户</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mongo</div><div class="line">use test</div><div class="line">db.addUser(&apos;test&apos;,&apos;123456&apos;)</div><div class="line">show users</div><div class="line">db.auth(&apos;test&apos;,&apos;123456&apos;)</div></pre></td></tr></table></figure>
+<h1 id="mongodb可视化客户端"><a href="#mongodb可视化客户端" class="headerlink" title="mongodb可视化客户端"></a>mongodb可视化客户端</h1><p><a href="https://www.robomongo.org/" target="_blank" rel="external">robomongo</a></p>
 
       
     </div>
@@ -434,8 +440,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -497,6 +512,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装mongodb服务"><span class="nav-number">1.</span> <span class="nav-text">安装mongodb服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装mongodb客户端"><span class="nav-number">2.</span> <span class="nav-text">安装mongodb客户端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启动mongodb服务"><span class="nav-number">3.</span> <span class="nav-text">启动mongodb服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启动客户端"><span class="nav-number">4.</span> <span class="nav-text">启动客户端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#远程访问mongodb"><span class="nav-number">5.</span> <span class="nav-text">远程访问mongodb</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mongodb添加用户"><span class="nav-number">6.</span> <span class="nav-text">mongodb添加用户</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加管理员用户"><span class="nav-number">6.1.</span> <span class="nav-text">添加管理员用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加某一个数据库用户"><span class="nav-number">6.2.</span> <span class="nav-text">添加某一个数据库用户</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mongodb可视化客户端"><span class="nav-number">7.</span> <span class="nav-text">mongodb可视化客户端</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
