@@ -352,6 +352,10 @@
 <h2 id="内置中间件"><a href="#内置中间件" class="headerlink" title="内置中间件"></a>内置中间件</h2><p>从 4.x 版本开始，, Express 已经不再依赖 Connect 了。除了 express.static, Express 以前内置的中间件现在已经全部单独作为模块安装使用了。</p>
 <h2 id="第三方中间件"><a href="#第三方中间件" class="headerlink" title="第三方中间件"></a>第三方中间件</h2><p>通过使用第三方中间件从而为 Express 应用增加更多功能。</p>
 <p>安装所需功能的 node 模块，并在应用中加载，可以在应用级加载，也可以在路由级加载。</p>
+<h1 id="express-session"><a href="#express-session" class="headerlink" title="express-session #"></a>express-session <a href="https://github.com/expressjs/session" target="_blank" rel="external">#</a></h1><p>express-session是express中比较常用的处理session的中间件。</p>
+<p>session的认证机制必须依赖cookie，所以还应该同时安装一个cookie-parser，安装方法同上。然后再app.js中导入这两个中间件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var cookieParser = require(&apos;cookie-parser&apos;);</div><div class="line">var session = require(&apos;express-session&apos;);</div></pre></td></tr></table></figure>
+<p><code>secret</code>：用来对session数据进行加密的字符串.这个属性值为必须指定的属性。<br><code>name</code>：表示cookie的name，默认cookie的name是：connect.sid。<br><code>maxAge</code>：cookie过期时间，毫秒。<br><code>resave</code>：是指每次请求都重新设置session cookie，假设你的cookie是6000毫秒过期，每次请求都会再设置6000毫秒。<br><code>saveUninitialized</code>： 是指无论有没有session cookie，每次请求都设置个session cookie ，默认这个标示为 connect.sid。</p>
 
           
         

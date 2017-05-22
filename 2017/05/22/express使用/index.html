@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/22/express使用/index.html">
 <meta property="og:site_name" content="ZHB'blog">
 <meta property="og:description" content="路由 #路由是指如何定义应用的端点（URIs）以及如何响应客户端的请求。 路由是由一个 URI、HTTP 请求（GET、POST等）和若干个句柄组成，它的结构如下： app.METHOD(path, [callback…], callback)， app 是 express 对象的一个实例， METHOD 是一个 HTTP 请求方法， path 是服务器上的路径， callback 是当路由匹配时">
-<meta property="og:updated_time" content="2017-05-22T02:18:18.928Z">
+<meta property="og:updated_time" content="2017-05-22T07:39:37.527Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="express使用">
 <meta name="twitter:description" content="路由 #路由是指如何定义应用的端点（URIs）以及如何响应客户端的请求。 路由是由一个 URI、HTTP 请求（GET、POST等）和若干个句柄组成，它的结构如下： app.METHOD(path, [callback…], callback)， app 是 express 对象的一个实例， METHOD 是一个 HTTP 请求方法， path 是服务器上的路径， callback 是当路由匹配时">
@@ -347,6 +347,10 @@
 <h2 id="内置中间件"><a href="#内置中间件" class="headerlink" title="内置中间件"></a>内置中间件</h2><p>从 4.x 版本开始，, Express 已经不再依赖 Connect 了。除了 express.static, Express 以前内置的中间件现在已经全部单独作为模块安装使用了。</p>
 <h2 id="第三方中间件"><a href="#第三方中间件" class="headerlink" title="第三方中间件"></a>第三方中间件</h2><p>通过使用第三方中间件从而为 Express 应用增加更多功能。</p>
 <p>安装所需功能的 node 模块，并在应用中加载，可以在应用级加载，也可以在路由级加载。</p>
+<h1 id="express-session"><a href="#express-session" class="headerlink" title="express-session #"></a>express-session <a href="https://github.com/expressjs/session" target="_blank" rel="external">#</a></h1><p>express-session是express中比较常用的处理session的中间件。</p>
+<p>session的认证机制必须依赖cookie，所以还应该同时安装一个cookie-parser，安装方法同上。然后再app.js中导入这两个中间件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var cookieParser = require(&apos;cookie-parser&apos;);</div><div class="line">var session = require(&apos;express-session&apos;);</div></pre></td></tr></table></figure>
+<p><code>secret</code>：用来对session数据进行加密的字符串.这个属性值为必须指定的属性。<br><code>name</code>：表示cookie的name，默认cookie的name是：connect.sid。<br><code>maxAge</code>：cookie过期时间，毫秒。<br><code>resave</code>：是指每次请求都重新设置session cookie，假设你的cookie是6000毫秒过期，每次请求都会再设置6000毫秒。<br><code>saveUninitialized</code>： 是指无论有没有session cookie，每次请求都设置个session cookie ，默认这个标示为 connect.sid。</p>
 
       
     </div>
@@ -520,7 +524,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#路由"><span class="nav-number">1.</span> <span class="nav-text">路由 #</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#中间件"><span class="nav-number">2.</span> <span class="nav-text">中间件 #</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#应用级中间件"><span class="nav-number">2.1.</span> <span class="nav-text">应用级中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路由级中间件"><span class="nav-number">2.2.</span> <span class="nav-text">路由级中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误处理中间件"><span class="nav-number">2.3.</span> <span class="nav-text">错误处理中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内置中间件"><span class="nav-number">2.4.</span> <span class="nav-text">内置中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三方中间件"><span class="nav-number">2.5.</span> <span class="nav-text">第三方中间件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#路由"><span class="nav-number">1.</span> <span class="nav-text">路由 #</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#中间件"><span class="nav-number">2.</span> <span class="nav-text">中间件 #</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#应用级中间件"><span class="nav-number">2.1.</span> <span class="nav-text">应用级中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路由级中间件"><span class="nav-number">2.2.</span> <span class="nav-text">路由级中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误处理中间件"><span class="nav-number">2.3.</span> <span class="nav-text">错误处理中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内置中间件"><span class="nav-number">2.4.</span> <span class="nav-text">内置中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三方中间件"><span class="nav-number">2.5.</span> <span class="nav-text">第三方中间件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#express-session"><span class="nav-number">3.</span> <span class="nav-text">express-session #</span></a></li></ol></div>
             
 
           </div>
