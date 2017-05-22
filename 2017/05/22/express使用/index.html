@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/22/express使用/index.html">
 <meta property="og:site_name" content="ZHB'blog">
 <meta property="og:description" content="路由 #路由是指如何定义应用的端点（URIs）以及如何响应客户端的请求。 路由是由一个 URI、HTTP 请求（GET、POST等）和若干个句柄组成，它的结构如下： app.METHOD(path, [callback…], callback)， app 是 express 对象的一个实例， METHOD 是一个 HTTP 请求方法， path 是服务器上的路径， callback 是当路由匹配时">
-<meta property="og:updated_time" content="2017-05-22T02:11:21.223Z">
+<meta property="og:updated_time" content="2017-05-22T02:18:18.928Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="express使用">
 <meta name="twitter:description" content="路由 #路由是指如何定义应用的端点（URIs）以及如何响应客户端的请求。 路由是由一个 URI、HTTP 请求（GET、POST等）和若干个句柄组成，它的结构如下： app.METHOD(path, [callback…], callback)， app 是 express 对象的一个实例， METHOD 是一个 HTTP 请求方法， path 是服务器上的路径， callback 是当路由匹配时">
@@ -337,7 +337,7 @@
         <h1 id="路由"><a href="#路由" class="headerlink" title="路由 #"></a>路由 <a href="http://www.expressjs.com.cn/guide/routing.html" target="_blank" rel="external">#</a></h1><p>路由是指如何定义应用的端点（URIs）以及如何响应客户端的请求。</p>
 <p>路由是由一个 URI、HTTP 请求（GET、POST等）和若干个句柄组成，它的结构如下： app.METHOD(path, [callback…], callback)， app 是 express 对象的一个实例， METHOD 是一个 HTTP 请求方法， path 是服务器上的路径， callback 是当路由匹配时要执行的函数。</p>
 <p>app.all() 是一个特殊的路由方法，没有任何 HTTP 方法与其对应，它的作用是对于一个路径上的所有请求加载中间件。</p>
-<h1 id="中间件"><a href="#中间件" class="headerlink" title="中间件 #"></a>中间件 <a href="http://www.expressjs.com.cn/guide/using-middleware.html" target="_blank" rel="external">#</a></h1><p>中间件（Middleware） 是一个函数，它可以访问请求对象（request object (req)）, 响应对象（response object (res)）, 和 web 应用中处于请求-响应循环流程中的中间件，一般被命名为 next 的变量。</p>
+<h1 id="中间件"><a href="#中间件" class="headerlink" title="中间件 #"></a>中间件 <a href="http://www.expressjs.com.cn/guide/using-middleware.html" target="_blank" rel="external">#</a></h1><p>中间件（Middleware） 是一个函数，它可以访问请求对象（request object (req)）, 响应对象（response object (res)）, 和 web 应用中处于请求-响应循环流程中的中间件，一般被命名为 <code>next</code> 的变量。</p>
 <p>如果当前中间件没有终结请求-响应循环，则必须调用 next() 方法将控制权交给下一个中间件，否则请求就会挂起。</p>
 <p>Express 应用可使用如下几种中间件：</p>
 <h2 id="应用级中间件"><a href="#应用级中间件" class="headerlink" title="应用级中间件"></a>应用级中间件</h2><p>应用级中间件绑定到 app 对象 使用 app.use() 和 app.METHOD()， 其中， METHOD 是需要处理的 HTTP 请求的方法，例如 GET, PUT, POST 等等，全部小写。</p>
