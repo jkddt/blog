@@ -97,10 +97,12 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/24/js笔记/index.html">
 <meta property="og:site_name" content="ZHB'blog">
 <meta property="og:description" content="原型对象 #12345Function.prototype = &amp;#123;  constructor : Function,  __proto__ : parent prototype,  some prototype properties: ...&amp;#125;; 函数的原型对象constructor默认指向函数本身，原型对象除了有原型属性外，为了实现继承，还有一个原型链指针proto，该指针指">
-<meta property="og:updated_time" content="2017-05-25T08:02:45.666Z">
+<meta property="og:image" content="http://pic002.cnblogs.com/images/2012/322503/2012072014243377.png">
+<meta property="og:updated_time" content="2017-05-25T08:09:49.718Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js笔记">
 <meta name="twitter:description" content="原型对象 #12345Function.prototype = &amp;#123;  constructor : Function,  __proto__ : parent prototype,  some prototype properties: ...&amp;#125;; 函数的原型对象constructor默认指向函数本身，原型对象除了有原型属性外，为了实现继承，还有一个原型链指针proto，该指针指">
+<meta name="twitter:image" content="http://pic002.cnblogs.com/images/2012/322503/2012072014243377.png">
 
 
 
@@ -346,6 +348,7 @@
 <h1 id="proto"><a href="#proto" class="headerlink" title="__proto__   #"></a>__proto__   <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto" target="_blank" rel="external">#</a></h1><p>__proto__的使用是有争议的，尽量不要使用。 </p>
 <p>__proto__的读取器(getter)暴露了一个对象的内部 [[Prototype]] 。<br>对于使用对象字面量创建的对象，这个值是 Object.prototype。<br>对于使用数组字面量创建的对象，这个值是 Array.prototype。<br>对于functions，这个值是Function.prototype。<br>对于使用 new fun 创建的对象，其中fun是由js提供的内建构造器函数之一(Array, Boolean, Date, Number, Object, String 等等），这个值总是fun.prototype。<br>对于用js定义的其他js构造器函数创建的对象，这个值就是该构造器函数的prototype属性。</p>
 <h1 id="constructor属性"><a href="#constructor属性" class="headerlink" title="constructor属性 #"></a>constructor属性 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes#constructor_属性" target="_blank" rel="external">#</a></h1><p>每个对象实例都具有 constructor 属性，它指向创建该实例的构造器函数。<br>返回一个指向创建了该对象原型的函数引用。需要注意的是，该属性的值是那个函数本身，而不是一个包含函数名称的字符串。</p>
+<p><img src="http://pic002.cnblogs.com/images/2012/322503/2012072014243377.png" alt=""></p>
 
       
     </div>
