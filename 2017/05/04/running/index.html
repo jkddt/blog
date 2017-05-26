@@ -102,7 +102,7 @@
 <meta property="og:image" content="http://hiphotos.baidu.com/exp/pic/item/9dc3cf58ccbf6c81a28b78b5b53eb13532fa40eb.jpg">
 <meta property="og:image" content="http://hiphotos.baidu.com/exp/pic/item/d66b7e59252dd42ae28b55f60a3b5bb5c8eab8aa.jpg">
 <meta property="og:image" content="http://hiphotos.baidu.com/exp/pic/item/48151723dd54564e89f6b064bade9c82d0584f98.jpg">
-<meta property="og:updated_time" content="2017-05-26T06:31:54.472Z">
+<meta property="og:updated_time" content="2017-05-26T06:33:55.676Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FirewallD is not running">
 <meta name="twitter:description" content="执行firewall-cmd –permanent –zone=public –add-port=3306/tcp，提示FirewallD is not running，如下图所示。 通过systemctl status firewalld查看firewalld状态，发现当前是dead状态，即防火墙未开启。 通过systemctl start firewalld开启防火墙，没有任何提示即开启成功">
@@ -360,7 +360,7 @@
 <h2 id="1-firewalld的基本使用"><a href="#1-firewalld的基本使用" class="headerlink" title="1.firewalld的基本使用"></a>1.firewalld的基本使用</h2><p>启动： <code>systemctl start firewalld</code><br>查看状态： <code>systemctl status firewalld</code><br>停止： <code>systemctl disable firewalld</code><br>禁用： <code>systemctl stop firewalld</code></p>
 <h2 id="2-systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。"><a href="#2-systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。" class="headerlink" title="2.systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。"></a>2.systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。</h2><p>启动一个服务：<code>systemctl start firewalld.service</code><br>关闭一个服务：<code>systemctl stop firewalld.service</code><br>重启一个服务：<code>systemctl restart firewalld.service</code><br>显示一个服务的状态：<code>systemctl status firewalld.service</code><br>在开机时启用一个服务：<code>systemctl enable firewalld.service</code><br>在开机时禁用一个服务：<code>systemctl disable firewalld.service</code><br>查看服务是否开机启动：<code>systemctl is-enabled firewalld.service</code><br>查看已启动的服务列表：<code>systemctl list-unit-files|grep enabled</code><br>查看启动失败的服务列表：<code>systemctl --failed</code></p>
 <h2 id="3-配置firewalld-cmd"><a href="#3-配置firewalld-cmd" class="headerlink" title="3.配置firewalld-cmd"></a>3.配置firewalld-cmd</h2><p>查看版本： <code>firewall-cmd --version</code><br>查看帮助： <code>firewall-cmd --help</code><br>显示状态： <code>firewall-cmd --state</code><br>查看所有打开的端口： <code>firewall-cmd --zone=public --list-ports</code><br>更新防火墙规则： <code>firewall-cmd --reload</code><br>查看区域信息:  <code>firewall-cmd --get-active-zones</code><br>查看指定接口所属区域： <code>firewall-cmd --get-zone-of-interface=eth0</code><br>拒绝所有包：<code>firewall-cmd --panic-on</code><br>取消拒绝状态： <code>firewall-cmd --panic-off</code><br>查看是否拒绝： <code>firewall-cmd --query-panic</code></p>
-<h2 id="那怎么开启一个端口呢"><a href="#那怎么开启一个端口呢" class="headerlink" title="那怎么开启一个端口呢"></a>那怎么开启一个端口呢</h2><p>添加<br><code>firewall-cmd --zone=public --add-port=80/tcp --permanent</code>    （--permanent永久生效，没有此参数重启后失效）<br>重新载入<br><code>firewall-cmd --reload</code><br>查看<br><code>firewall-cmd --zone= public --query-port=80/tcp</code><br>删除<br><code>firewall-cmd --zone= public --remove-port=80/tcp --permanent</code></p>
+<h2 id="那怎么开启一个端口呢"><a href="#那怎么开启一个端口呢" class="headerlink" title="那怎么开启一个端口呢"></a>那怎么开启一个端口呢</h2><p>添加<br><code>firewall-cmd --zone=public --add-port=80/tcp --permanent</code>    （--permanent永久生效，没有此参数重启后失效）<br>重新载入<br><code>firewall-cmd --reload</code><br>查看<br><code>firewall-cmd --zone=public --query-port=80/tcp</code><br>删除<br><code>firewall-cmd --zone=public --remove-port=80/tcp --permanent</code></p>
 
       
     </div>
